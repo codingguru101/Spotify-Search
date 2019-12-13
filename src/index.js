@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-
 import "./styles.css";
+import authenticate from "./authenticate";
 
-const accessToken =
-  "BQCK37KkaHSSIbaamOL1g4fkDoENLx6jJaGirq_kKlQlk9ex0UgwNs01zZBmkw4MXavh5SZEA1mrKe3Lz6M4ylmSBXuSei-i5e872_mJi7oos9qXg8njKzF8F7s95yHKDDBoKKJSiAzWn_R1ZOYKJrCd3o3uDHY";
+const accessToken = authenticate();
+
 function App() {
   const [artists, setArtists] = useState([]);
   const [query, setQuery] = useState("");
